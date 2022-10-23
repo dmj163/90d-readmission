@@ -55,7 +55,6 @@ def predict_probability(model, df):
 
 
 # 导入模型
-model = joblib.load('save/cb_90d_14_isotonic.pkl')
 model1 = joblib.load('save/cb_90d_14.pkl')
 st.sidebar.title("Features")
 
