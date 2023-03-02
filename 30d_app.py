@@ -58,7 +58,7 @@ def predict_probability(model, df):
 
 
 # 导入模型
-model = joblib.load('save/cb_150220.pkl')
+model = joblib.load('cb_150220.pkl')
 st.sidebar.title("Features")
 
 # 设置各项特征的输入范围和选项
