@@ -158,8 +158,9 @@ st.table(features_df)
 # 显示预测结果与shap解释图
 if st.button('Predict'):
     prediction = predict_probability(model, features_df)
-    st.write("the probability of readmission:")
+    st.write("the risk of readmission:")
     st.success(round(prediction[0], 3))
+'''
     explainer = shap.TreeExplainer(model)
     shap_values = explainer.shap_values(features_df)
     shap.force_plot(explainer.expected_value, shap_values[0], features_df, matplotlib=True, show=False)
@@ -170,4 +171,5 @@ if st.button('Predict'):
                         hspace=0.2,
                         wspace=0.2)
     plt.savefig('test_shap.png')
+ '''
     st.image('test_shap.png', caption='Individual prediction explanation', use_column_width=True)
