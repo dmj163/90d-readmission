@@ -160,17 +160,3 @@ if st.button('Predict'):
     prediction = predict_probability(model, features_df)
     st.write("the risk of readmission:")
     st.success(round(prediction[0], 3))
-'''
-    explainer = shap.TreeExplainer(model)
-    shap_values = explainer.shap_values(features_df)
-    shap.force_plot(explainer.expected_value, shap_values[0], features_df, matplotlib=True, show=False)
-    plt.subplots_adjust(top=0.67,
-                        bottom=0.0,
-                        left=0.1,
-                        right=0.9,
-                        hspace=0.2,
-                        wspace=0.2)
-    plt.savefig('test_shap.png')
-
-    st.image('test_shap.png', caption='Individual prediction explanation', use_column_width=True)
-     '''
