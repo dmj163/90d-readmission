@@ -171,5 +171,6 @@ if st.button('Predict'):
                         hspace=0.2,
                         wspace=0.2)
     plt.savefig('test_shap.png')
- '''
+
     st.image('test_shap.png', caption='Individual prediction explanation', use_column_width=True)
+     '''
